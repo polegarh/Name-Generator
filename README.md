@@ -42,3 +42,8 @@ Here are 10 novel female names:
 ```
 
 ### How does this application generate unique names? 
+1. Parse the dataset and generate a dictionary that will contain a pair of characters as key and an char array as its value. See code below as an example. 
+```
+{('al', ['e', 'e', 'i']), ('ol', ['e', 'o', 'i', 'i']), ('le', ['x', 'p', 'f', 'k'])}
+```
+2. When generating a new name, the application will go through this dictionary until it finds a key that matches current last two characters of new name, and then the way it will select the next letter of the name is by randomly choosing a chracter in a value of this key. 
