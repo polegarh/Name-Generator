@@ -46,4 +46,19 @@ Here are 10 novel female names:
 ```
 {('al', ['e', 'e', 'i']), ('ol', ['e', 'o', 'i', 'i']), ('le', ['x', 'p', 'f', 'k'])}
 ```
-2. When generating a new name, the application will go through this dictionary until it finds a key that matches current last two characters of new name, and then the way it will select the next letter of the name is by randomly choosing a chracter in a value of this key. 
+2. When generating a new name, the application will go through this dictionary until it finds a key that matches current last two characters of new name, and then the way it will select the next letter of the name is by randomly choosing a chracter in a value of this key. See example below to better understand how probability will work. 
+```
+{('al', ['e', 'e', 'i', 'l', 'o', 'e', 'j', 'e']), ...}
+```
+Here we can see that since we are chosing random index in 
+```
+['e', 'e', 'i', 'l', 'o', 'e', 'j', 'e']
+```
+That means probabilities of each letter will be the following:
+```
+'e' : 4/8 = 50.0%  
+'i' : 1/8 = 12.5%
+'l' : 1/8 = 12.5%
+'o' : 1/8 = 12.5%
+'j' : 1/8 = 12.5%
+```
